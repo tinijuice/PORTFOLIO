@@ -220,6 +220,7 @@
 
 
 #MDS {
+    margin-top: 120px;
 
     .container {
         height: 100%;
@@ -283,12 +284,19 @@
                 align-items: center;
 
                 .textbox {
-                    width: 40%;
                     display: flex;
-                    justify-content: center;
-                    flex-flow: wrap;
+                    flex-flow: column;
+                    align-items: center;
                     gap: 10px;
-                    row-gap: 8px;
+
+                    div {
+                        display: flex;
+                        gap: 10px;
+
+                        &:last-child span:last-child {
+                            color: var(--orange);
+                        }
+                    }
 
                     span {
                         font-size: 6.5rem;
@@ -299,10 +307,6 @@
                         color: var(--white);
 
                         --after-opacity: 1;
-
-                        &:last-child {
-                            color: var(--orange);
-                        }
 
                         &::after {
                             content: '';
@@ -371,7 +375,7 @@
                 }
             }
 
-            .circle{
+            .circle {
                 width: 70%;
                 aspect-ratio: 1;
                 background-color: var(--orange);
@@ -390,7 +394,19 @@
 
 
 
+@include mq(md) {
 
+    #MDS {
+        .container {
+            .title {
+
+                span {
+                    font-size: 30vw;
+                }
+            }
+        }
+    }
+}
 
 
 @include mq(sm) {
@@ -433,6 +449,24 @@
                 font-weight: 700;
                 line-height: 88%;
                 letter-spacing: -5.4px;
+            }
+        }
+    }
+
+    #MDS {
+        .container {
+            .title {
+
+                span {
+                    font-size: 38vw;
+                }
+            }
+
+            .mainText .texts .textbox {
+
+                span {
+                    font-size: 5.8rem;
+                }
             }
         }
     }
@@ -494,6 +528,24 @@
         }
     }
 
+    #MDS {
+        .container {
+            .title {
+
+                span {
+                    font-size: 38vw;
+                }
+            }
+
+            .mainText .texts .textbox {
+
+                span {
+                    font-size: 4.6rem;
+                }
+            }
+        }
+    }
+
 
 }
 
@@ -540,6 +592,25 @@
 
                 span.margin {
                     margin-top: 0;
+                }
+            }
+        }
+    }
+
+    #MDS {
+        .container {
+
+            .mainText .texts .textbox {
+
+                gap: 5px;
+
+                div{
+                    gap: 5px;
+                }
+
+                span {
+                    font-size: 2.4rem;
+                    line-height: 1.2;
                 }
             }
         }
