@@ -103,11 +103,52 @@ function savoirPlus() {
 
 function MDS() {
     const mds = document.querySelector('#MDS');
+    const textBox = mds.querySelector('.mainText'); // juste un élément
+    const texts = mds.querySelectorAll('.mainText span');
 
-    
+    gsap.to(texts, {
+        "--after-opacity": 0,
+        stagger: .1,
+        scrollTrigger: {
+            trigger: textBox,
+            start: "top 20%",
+            end: "bottom 80%",
+            scrub: 1,
+            markers: false
+        }
+    });
+
+    const textBox2 = mds.querySelector('.secondText');
+    const texts2 = textBox2.querySelectorAll('p');
+    const circle = textBox2.querySelector('.circle');
+
+    gsap.to(texts2, {
+        color: "var(--orange)",
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: textBox2,
+            start: "55% 20%",
+            end: "botom 80%",
+            scrub: 1,
+            markers: false
+        }
+    });
+
+    gsap.to(circle, {
+        y: "70%",
+        scrollTrigger: {
+            trigger: textBox2,
+            start: "top 20%",
+            end: "bottom 10%",
+            scrub: 1,
+            markers: false
+        }
+    })
+
 }
 
 MDS();
+
 
 
 
