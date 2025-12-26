@@ -19,7 +19,7 @@
     }
 }
 
-.bg {
+.bg-hero {
     position: absolute;
     height: 150vh;
     width: 100%;
@@ -331,7 +331,7 @@
             align-items: center;
             gap: 6rem;
             position: relative;
-            padding-bottom: 200px;
+            padding-bottom: 12vw;
 
             .about {
                 position: absolute;
@@ -389,6 +389,85 @@
 }
 
 
+#parcours {
+    height: 150vh;
+
+    .bg {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: .05;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 250px;
+
+        .title {
+
+            p {
+                font-size: 15.5rem;
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: 700;
+                line-height: 1;
+
+            }
+
+            .highlight {
+                color: var(--orange);
+                font-family: 'Brier';
+            }
+        }
+
+        .box-container {
+            height: 50vh;
+
+            .box {
+                height: 300px;
+                width: 350px;
+                background-color: black;
+                position: relative;
+
+                .text-box {
+                    overflow: hidden;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0;
+
+                    .texts {
+                        transform: translateY(57%);
+
+                        p {
+                            font-size: 2.3rem;
+                            color: var(--white);
+                            text-transform: uppercase;
+
+                            &:not(:last-child) {
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
 
 
 
@@ -402,6 +481,23 @@
 
                 span {
                     font-size: 30vw;
+                }
+            }
+
+            .secondText {
+
+                p {
+                    font-size: 4rem;
+                    line-height: 120%;
+
+                    span {
+                        width: 300px;
+                        height: 1px;
+
+                        &:first-child {
+                            height: 4.8rem;
+                        }
+                    }
                 }
             }
         }
@@ -466,6 +562,23 @@
 
                 span {
                     font-size: 5.8rem;
+                }
+            }
+
+            .secondText {
+
+                p {
+                    font-size: 3rem;
+                    line-height: 120%;
+
+                    span {
+                        width: 200px;
+                        height: 1px;
+
+                        &:first-child {
+                            height: 4.8rem;
+                        }
+                    }
                 }
             }
         }
@@ -604,7 +717,7 @@
 
                 gap: 5px;
 
-                div{
+                div {
                     gap: 5px;
                 }
 

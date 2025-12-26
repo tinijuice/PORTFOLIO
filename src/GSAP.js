@@ -96,14 +96,14 @@ function savoirPlus() {
             start: "60% 40%",
             end: "70% center",
             scrub: 1,
-            markers: true
+            markers: false
         }
     });
 }
 
-function MDS() {
+function mds() {
     const mds = document.querySelector('#MDS');
-    const textBox = mds.querySelector('.mainText'); // juste un élément
+    const textBox = mds.querySelector('.mainText');
     const texts = mds.querySelectorAll('.mainText span');
 
     gsap.to(texts, {
@@ -147,7 +147,28 @@ function MDS() {
 
 }
 
-MDS();
+mds();
+
+
+function parcours() {
+    
+    const parcours = document.querySelector('#parcours')
+    const box = parcours.querySelector('.box-container')
+    const text = parcours.querySelector('.texts')
+
+    gsap.to(text, {
+        y: "0%",
+        scrollTrigger: {
+            trigger: box,
+            start: "10% 90%",
+            end: "bottom 50%",
+            scrub: 1,
+            markers: false
+        }
+    })
+}
+
+parcours()
 
 
 
